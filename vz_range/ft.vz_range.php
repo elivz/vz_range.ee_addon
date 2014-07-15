@@ -4,7 +4,7 @@
  * VZ Range Class
  *
  * @author    Eli Van Zoeren <eli@elivz.com>
- * @copyright Copyright (c) 2012 Eli Van Zoeren
+ * @copyright Copyright (c) 2012-2014 Eli Van Zoeren
  * @license   http://creativecommons.org/licenses/by-sa/3.0/ Attribution-Share Alike 3.0 Unported
  */
 
@@ -12,15 +12,15 @@ class Vz_range_ft extends EE_Fieldtype {
 
     public $info = array(
         'name'      => 'VZ Range',
-        'version'   => '1.0.1',
+        'version'   => '1.0.2',
     );
 
     /**
      * Fieldtype Constructor
      */
-    function Vz_range_ft()
+    function __construct()
     {
-        parent::EE_Fieldtype();
+        parent::__construct();
 
         if (!isset($this->EE->session->cache['vz_range']))
         {
